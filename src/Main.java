@@ -17,19 +17,20 @@ public class Main {
         System.out.println(wordLine + s + nameBoy);
         System.out.println("My name is " + "Beka");
         System.out.println();
-        // Цикл while. Повторяет оператор или блок операторов до тех пор, пока значение его управляющего выражения истинно !
+        // Цикл while - повторяет оператор или блок операторов до тех пор, пока значение его управляющего выражения истинно !
         int value = 0;
         while (value < 5) {
             System.out.println("Hello" + value);
             value = value + 1;
         }
         System.out.println();
-        //Цикл for.Управляющая конструкция программного кода, которая нарушает линейность исполнения алгоритма и позволяет выполнить указанный код множество раз !
+        /*Цикл for - управляющая конструкция программного кода, которая нарушает линейность исполнения алгоритма
+         и позволяет выполнить указанный код множество раз ! */
         for (int i = 0; i <= 20; i++) {// i++ == i=i+1
             System.out.println("Hi " + i);
         }
 
-        //Условный оператор if.Конструкция, которая, проверяя условия, запускает в действие необходимый код !
+        //Условный оператор if - конструкция, которая, проверяя условия, запускает в действие необходимый код !
         int digit = 10;
         if (digit < 10) {
             System.out.println("ВЕРНО");
@@ -44,7 +45,8 @@ public class Main {
         String x = scanner.nextLine();
         System.out.println("Вы ввели - " + x);
 
-        //Цикл do...while. Похож на цикл while, отличие, что цикл do...while гарантированно выполнится, по крайней мере один раз !
+        /*Цикл do...while - похож на цикл while, отличие, что цикл do...while гарантированно выполнится,
+        по крайней мере один раз !*/
         int number = 0;
         do {
             System.out.println("Введи 7");
@@ -52,7 +54,8 @@ public class Main {
         } while (number != 7);
         System.out.println(" МОЛОДЦЫ, ВЫ ВВЕЛИ 7 ");
 
-        //Операторы break и continue. Оператор break завершает ближайший оператор или операторитерации switch . Оператор continue запускает новую итерацию ближайшего включающего оператора итерации !
+        /*Операторы break и continue. Оператор break завершает ближайший оператор или операторитерации switch.
+        Оператор continue запускает новую итерацию ближайшего включающего оператора итерации !*/
         int digital = 0;
         while (true) {
             if (digital == 15) {
@@ -70,7 +73,7 @@ public class Main {
             System.out.println("Это нечетное число " + i);
         }
 
-        //Оператор return. Используется в функциях для возвращения данных после выполнения работы самой функции !
+        //Оператор return - используется в функциях для возвращения данных после выполнения работы самой функции !
         String nyc = bitch("");
         System.out.println(nyc);
     }
@@ -78,7 +81,7 @@ public class Main {
     public static String bitch(String beka) {
         return ("ты " + "пукнул");
 
-        //Оператор switch. Условный оператор, который дает возможность сравнивать переменную со списком значений !
+        //Оператор switch - условный оператор, который дает возможность сравнивать переменную со списком значений !
         Scanner scanners = new Scanner(System.in);
         System.out.println("Введи свой возраст : ");
         int lifeAndAge = scanners.nextInt();
@@ -99,7 +102,7 @@ public class Main {
                 System.out.println("НИ ОДИН ИЗ НИХ");
         }
 
-        //Массивы в Java. Структура данных. Шкаф с полочками !
+        //Массивы в Java - структура данных, шкаф с полочками !
         int[] ageOfPupils = {13, 14, 15, 16, 17};
         System.out.println(ageOfPupils[0]);
 
@@ -128,7 +131,7 @@ public class Main {
         }
         System.out.println(sum);
 
-        //Многомерные массивы. Массивы массивов !
+        //Многомерные массивы - массивы массивов !
         int[] digitOne = {9, 8, 7};
         int[][] matrices = {{3, 2, 1},
                 {6, 5, 4},
@@ -162,7 +165,7 @@ public class Main {
             int age;
         }
 
-        //Методы в Java. Это блок кода, обьявляемый внутри класса !
+        //Методы в Java - это блок кода, обьявляемый внутри класса !
         public class Main {
             public static void main(String[] args) {
                 Person person1 = new Person();
@@ -183,11 +186,13 @@ public class Main {
             //Действия, которые они могут совершать (Методы)
             String name;
             int age;
+
             void speak() {
                 for (int i = 0; i < 3; i++) {
                     System.out.println("My name is " + name + " I'm " + age);
                 }
             }
+
             void sayHello() {
                 System.out.println("HI !");
             }
@@ -211,21 +216,24 @@ public class Main {
         class Person {
             String name;
             int age;
+
             int calculateYearsToRetirement() {
                 int years = 65 - age;
                 return years;
             }
+
             void speak() {
                 for (int i = 0; i < 3; i++) {
                     System.out.println("My name is " + name + " I'm " + age);
                 }
             }
+
             void sayHello() {
                 System.out.println("HI !");
             }
         }
 
-        //Параметры метода ! Это специальные переменные метода !
+        //Параметры метода - это специальные переменные метода !
         public class Main {
             public static void main(String[] args) {
                 Person person1 = new Person();
@@ -236,22 +244,27 @@ public class Main {
                 person1.speak();
                 person2.speak();
             }
+
             static class Person {
                 String name;
                 int age;
+
                 void setNameAndAge(String username, int userage) {
                     name = username;
                     age = userage;
                 }
+
                 int calculateYearsToRetirement() {
                     int years = 65 - age;
                     return years;
                 }
+
                 void speak() {
                     for (int i = 0; i < 3; i++) {
                         System.out.println("My name is " + name + " I'm " + age);
                     }
                 }
+
                 void sayHello() {
                     System.out.println("HI !");
                 }
@@ -273,9 +286,11 @@ public class Main {
         class Person {
             private String name;
             private int age;
+
             public String getName() {
                 return name;
             }
+
             public void setName(String name) {
                 if (name.isEmpty()) {
                     System.out.println("You entered empty name ");
@@ -283,9 +298,11 @@ public class Main {
                     this.name = name;
                 }
             }
+
             public int getAge() {
                 return age;
             }
+
             public void setAge(int age) {
                 if (age < 0) {
                     System.out.println("Name should be positive ");
@@ -293,17 +310,19 @@ public class Main {
                     this.age = age;
                 }
             }
+
             void speak() {
                 for (int i = 0; i < 3; i++) {
                     System.out.println("My name is " + name + " I'm " + age);
                 }
             }
+
             void sayHello() {
                 System.out.println(" HI !");
             }
         }
 
-        //Ключевое слово this. - это ключевое слово, которое вызывает обьект внутри класса !
+        //Ключевое слово this - это ключевое слово, которое вызывает обьект внутри класса !
         public class Main {
             public static void main(String[] args) {
                 Human human1 = new Human();
@@ -315,15 +334,19 @@ public class Main {
         class Human {
             String name;
             int age;
+
             public String getName() {
                 return name;
             }
+
             public void setName(String name) {
                 this.name = name;
             }
+
             public int getAge() {
                 return age;
             }
+
             public void setAge(int age) {
                 this.age = age;
             }
@@ -333,7 +356,7 @@ public class Main {
             }
         }
 
-        //Конструкторы. Это специальные методы, которые вызываются при создании нового обьекта !
+        //Конструкторы - это специальные методы, которые вызываются при создании нового обьекта !
         public class Main {
             public static void main(String[] args) {
                 Human human1 = new Human();
@@ -345,19 +368,24 @@ public class Main {
                 this.age = 15;
                 System.out.println("Привет из первого конструктора !");
             }
+
             private String name;
             private int age;
+
             public Human() {
             }
+
             public void setName(String name) {
                 this.name = name;
             }
+
             public void setAge(int age) {
                 this.age = age;
             }
         }
 
-        //Ключевое слово static.
+        /*Ключевое слово static - используется для обьявления статического члена, принадлежащего собственному типу,
+        а не конкретному обьекту !*/
         public class Main {
             public static void main(String[] args) {
                 Human human = new Human("BOB", 35);
@@ -373,56 +401,230 @@ public class Main {
             private int age;
 
             private static int countPeople;
+
             public Human(String name, int age) {
                 this.name = name;
                 this.age = age;
                 countPeople++;
             }
+
             public void setName(String name) {
                 this.name = name;
             }
+
             public void setAge(int age) {
                 this.age = age;
             }
-            public void printCountofPeople(){
+
+            public void printCountofPeople() {
                 System.out.println("NUMBER OF PEOPLE IS " + countPeople);
             }
         }
 
-        // Ключевое слово final.
+        // Ключевое слово final(модификатор) применяется для ограничения поведения !
         public class Main {
             public static void main(String[] args) {
-                final int x =0;
+                final int x = 0;
                 System.out.println(x);
-                x=5;
+                x = 5;
             }
         }
-        class TEST{
+        class TEST {
             public static final int CONSTANT = 0;
         }
 
-        //StringBuilder.
+        //StringBuilder - класс, используемый для создания изменяемой последовательности символов !
+        public class Main {
+            public static void main(String[] args) {
+                String X = "hello";
+                X = X.toUpperCase();
+                System.out.println(X);
+                System.out.println();
+                String string1 = "HI, ";
+                String string2 = "MY ";
+                String string3 = "FRIEND !";
+                String all = string1 + string2 + string3;
+                System.out.println(all);
+                System.out.println();
+                StringBuilder sb = new StringBuilder("HELLO, ");
+                sb.append(" MY ").append(" FRIEND !");
+                System.out.println(sb.toString());
+            }
+        }
 
+        /*Форматирование строк в Java
+        %s ("Hello %s!","world") String
+        %b ("Hello %b!", null) boolean
+        %c ("Hello wor%cd", 'l') char
+        %d ("I'M ONLY %d", 20) int, byte, short,int, long, BigInteger
+        %n Разделитель строк для конкретной платформы
+        %t ("TODAY %tA", new Date())
+         */
+        public class Main {
+            public static void main(String[] args) {
+                System.out.printf("STRING %.2f\n",3.33);
+                System.out.printf("STRING %.2f\n",45.36366);
+                System.out.printf("STRING %-10d\n",5);
+                System.out.printf("STRING %-10d\n",100000);
+                System.out.printf("STRING %-10d\n",1000000000);
+                //% -[10] [.42]
+            }
+        }
 
-        //Форматирование строк в Java
+        /*Класс Object и метод toString()
+        Метод toString служит для получения представления данного объекта в виде строки.
+        В Java есть специальный суперкласс Object и все классы являются его подклассами.
+         */
+        public class Main {
+            public static void main(String[] args) {
+                Human human = new Human("BOB", 35);
+                human.toString();
+                System.out.println(human.toString());
+            }
+        }
+        class Human {
+            private String name;
+            private int age;
+            public Human(String name, int age) {
+                this.name = name;
+                this.age = age;
+            }
+            public String toString() {
+                return name + "," + age;
+            }
+        }
 
+         //Наследование - механизм получения нового класса на основе уже существующего.
+//LESSON.java
+        public class LESSON {
+            public static void main(String[] args) {
+                Animal animal = new Animal();
+                animal.eat();
+                animal.sleep();
+                DOG dog = new DOG();
+                dog.eat();
+                dog.sleep();
+                dog.bark();
+                dog.showName();
+            }
+        }
+//Animal.java
+        public class Animal {
+            String name = "beka";
+            public void eat(){
+                System.out.println("I'M EATING !");
+            }
+            public void sleep(){
+                System.out.println("I'M SLEEPING !");
+            }
+        }
+//DOG.java
+        public class DOG extends Animal{
+            public void eat(){
+                System.out.println("DOG IS EATING");
+            }
+            public void bark(){
+                System.out.println("GAV GAV GAV");
+            }
+            public void showName(){
+                System.out.println(name);
+            }
+        }
 
-        //Класс Object и метод toString()
+        /*Интерфейсы - определяют некоторый функционал, не имеющий конкретной реализации,
+         который затем реализуют классы, применяющие эти интерфейсы */
+//ANIMAL.java
+package INTERFACE;
+        public class ANIMAL implements INFO {
+            public int id;
+            public ANIMAL(int id) {
+                this.id = id;
+            }
+            public void sleep(){
+                System.out.println("i am sleeping ! ");
+            }
+            @Override
+            public void showInfo() {
+                System.out.println("ID IS "+this.id);
+            }
+        }
+//INFO.java
+        package INTERFACE;
+        public interface INFO {
+            public void showInfo();
+        }
+//PERSON.java
+        package INTERFACE;
+        public class PERSON implements INFO{
+            public String name;
+            public PERSON(String name) {
+                this.name = name;
+            }
+            public void sayHello (){
+                System.out.println("hello !");
+            }
+            @Override
+            public void showInfo() {
+                System.out.println("NAME IS "+this.name);
+            }
+        }
+//TEST.java
+        package INTERFACE;
 
+        public class TEST {
+            public static void main (String[] args){
+                ANIMAL animal = new ANIMAL(1);
+                PERSON person = new PERSON("BOB");
+                animal.sleep();
+                person.sayHello();
+                animal.showInfo();
+                person.showInfo();
+                System.out.println();
+                INFO info = new ANIMAL(1);
+                INFO info1 = new PERSON("MOM");
+                outputInfo(info);
+                outputInfo(info1);
+                System.out.println();
+                ANIMAL animal1 = new ANIMAL(1);
+                PERSON person1 = new PERSON("TOM");
+                outputInfo(animal1);
+                outputInfo(person1);
+            }
+            public static void outputInfo (INFO info){
+                info.showInfo();
+            }
+        }
 
-        //Наследование
+        //Пакеты - позволяют организовать классы логически в наборы
+        "C:\Users\User\Pictures\Screenshots\Снимок экрана (2).png"
+        //Main.java
+        import FOREST.SQUIRELL;
+import FOREST.TREE;
+import SOMETHING.SOMECLASS;
 
-
-        //Интерфейсы
-
-
-        //Пакеты
-
+import java.util.Scanner;
+        public class Main {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                TREE tree = new TREE();
+                SQUIRELL squirell = new SQUIRELL();
+                SOMECLASS someclass = new SOMECLASS();
+            }
+        }
+//SOMECLASS.java
+        package SOMETHING;
+        public class SOMECLASS {
+        }
+//TREE.java
+        package FOREST;
+        public class TREE {
+        }
+//SQUIRELL.java
+        package FOREST;
+        public class SQUIRELL {
+        }
 
         //Модификаторы доступа public, private, protected и default.
-
-
-        //Enum (Перечисления).
 
 
         //Полиморфизм
