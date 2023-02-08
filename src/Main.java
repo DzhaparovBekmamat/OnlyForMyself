@@ -10,6 +10,45 @@ public class Main {
         char symbol = 'a'; // один символ, буква
         boolean b = true; // true or false
 
+        //Поразрядные операции !
+        byte b = 7;     // 0000 0111
+        short s = 7;    // 0000 0000 0000 0111
+        //& (логическое умножение)
+        int a1 = 2; //010
+        int b1 = 5;//101
+        System.out.println(a1 & b1); // результат 0
+
+        int a2 = 4; //100
+        int b2 = 5; //101
+        System.out.println(a2 & b2); // результат 4
+        //| (логическое сложение)
+        int a1 = 2; //010
+        int b1 = 5;//101
+        System.out.println(a1 | b1); // результат 7 - 111
+        int a2 = 4; //100
+        int b2 = 5;//101
+        System.out.println(a2 | b2); // результат 5 - 101
+        //^ (логическое исключающее ИЛИ)
+        int number = 45; // 1001 Значение, которое надо зашифровать - в двоичной форме 101101
+        int key = 102; //Ключ шифрования - в двоичной системе 1100110
+        int encrypt = number ^ key; //Результатом будет число 1001011 или 75
+        System.out.println("Зашифрованное число: " + encrypt);
+
+        int decrypt = encrypt ^ key; // Результатом будет исходное число 45
+        System.out.println("Расшифрованное число: " + decrypt);
+        //~ (логическое отрицание)
+        byte a = 12;                 // 0000 1100
+        System.out.println(~a);     //  1111 0011   или -13
+        //Операции присваивания и приоритет операций !
+        int a = 5;
+        a += 10;        // 15
+        a -= 3;         // 12
+        a *= 2;         // 24
+        a /= 6;         // 4
+        a <<= 4;      // 64
+        a >>= 2;      // 16
+        System.out.println(a);  // 16
+
         //Ссылочные типы данных. Строки(String) в Java. Представляет собой последовательность символов !
         String wordLine = "Hi";
         String s = " ";
@@ -17,7 +56,8 @@ public class Main {
         System.out.println(wordLine + s + nameBoy);
         System.out.println("My name is " + "Beka");
         System.out.println();
-        // Цикл while - повторяет оператор или блок операторов до тех пор, пока значение его управляющего выражения истинно !
+        /* Цикл while - повторяет оператор или блок операторов до тех пор, пока значение его управляющего 
+        выражения истинно ! */
         int value = 0;
         while (value < 5) {
             System.out.println("Hello" + value);
@@ -46,7 +86,7 @@ public class Main {
         System.out.println("Вы ввели - " + x);
 
         /*Цикл do...while - похож на цикл while, отличие, что цикл do...while гарантированно выполнится,
-        по крайней мере один раз !*/
+        по крайней мере один раз ! */
         int number = 0;
         do {
             System.out.println("Введи 7");
@@ -55,7 +95,7 @@ public class Main {
         System.out.println(" МОЛОДЦЫ, ВЫ ВВЕЛИ 7 ");
 
         /*Операторы break и continue. Оператор break завершает ближайший оператор или операторитерации switch.
-        Оператор continue запускает новую итерацию ближайшего включающего оператора итерации !*/
+        Оператор continue запускает новую итерацию ближайшего включающего оператора итерации ! */
         int digital = 0;
         while (true) {
             if (digital == 15) {
@@ -272,8 +312,7 @@ public class Main {
         }
 
         /*Инкапсуляция. Сеттеры и геттеры. Инкапсуляция - способ спрятать сложную логику внутри класса ! С и Г -
-        используются для получения значения поля класса или его изменения !
-         */
+        используются для получения значения поля класса или его изменения ! */
         public class Main {
             public static void main(String[] args) {
                 Person person1 = new Person();
@@ -452,7 +491,7 @@ public class Main {
             }
         }
 
-        /*Форматирование строк в Java
+        /* Форматирование строк в Java !
         %s ("Hello %s!","world") String
         %b ("Hello %b!", null) boolean
         %c ("Hello wor%cd", 'l') char
@@ -462,19 +501,18 @@ public class Main {
          */
         public class Main {
             public static void main(String[] args) {
-                System.out.printf("STRING %.2f\n",3.33);
-                System.out.printf("STRING %.2f\n",45.36366);
-                System.out.printf("STRING %-10d\n",5);
-                System.out.printf("STRING %-10d\n",100000);
-                System.out.printf("STRING %-10d\n",1000000000);
+                System.out.printf("STRING %.2f\n", 3.33);
+                System.out.printf("STRING %.2f\n", 45.36366);
+                System.out.printf("STRING %-10d\n", 5);
+                System.out.printf("STRING %-10d\n", 100000);
+                System.out.printf("STRING %-10d\n", 1000000000);
                 //% -[10] [.42]
             }
         }
 
         /*Класс Object и метод toString()
         Метод toString служит для получения представления данного объекта в виде строки.
-        В Java есть специальный суперкласс Object и все классы являются его подклассами.
-         */
+        В Java есть специальный суперкласс Object и все классы являются его подклассами ! */
         public class Main {
             public static void main(String[] args) {
                 Human human = new Human("BOB", 35);
@@ -485,16 +523,18 @@ public class Main {
         class Human {
             private String name;
             private int age;
+
             public Human(String name, int age) {
                 this.name = name;
                 this.age = age;
             }
+
             public String toString() {
                 return name + "," + age;
             }
         }
 
-         //Наследование - механизм получения нового класса на основе уже существующего.
+        //Наследование - механизм получения нового класса на основе уже существующего !
 //LESSON.java
         public class LESSON {
             public static void main(String[] args) {
@@ -511,41 +551,48 @@ public class Main {
 //Animal.java
         public class Animal {
             String name = "beka";
-            public void eat(){
+
+            public void eat() {
                 System.out.println("I'M EATING !");
             }
-            public void sleep(){
+
+            public void sleep() {
                 System.out.println("I'M SLEEPING !");
             }
         }
 //DOG.java
-        public class DOG extends Animal{
-            public void eat(){
+        public class DOG extends Animal {
+            public void eat() {
                 System.out.println("DOG IS EATING");
             }
-            public void bark(){
+
+            public void bark() {
                 System.out.println("GAV GAV GAV");
             }
-            public void showName(){
+
+            public void showName() {
                 System.out.println(name);
             }
         }
 
         /*Интерфейсы - определяют некоторый функционал, не имеющий конкретной реализации,
-         который затем реализуют классы, применяющие эти интерфейсы */
+         который затем реализуют классы, применяющие эти интерфейсы ! */
 //ANIMAL.java
 package INTERFACE;
         public class ANIMAL implements INFO {
             public int id;
+
             public ANIMAL(int id) {
                 this.id = id;
             }
-            public void sleep(){
+
+            public void sleep() {
                 System.out.println("i am sleeping ! ");
             }
+
             @Override
             public void showInfo() {
-                System.out.println("ID IS "+this.id);
+                System.out.println("ID IS " + this.id);
             }
         }
 //INFO.java
@@ -555,24 +602,27 @@ package INTERFACE;
         }
 //PERSON.java
         package INTERFACE;
-        public class PERSON implements INFO{
+        public class PERSON implements INFO {
             public String name;
+
             public PERSON(String name) {
                 this.name = name;
             }
-            public void sayHello (){
+
+            public void sayHello() {
                 System.out.println("hello !");
             }
+
             @Override
             public void showInfo() {
-                System.out.println("NAME IS "+this.name);
+                System.out.println("NAME IS " + this.name);
             }
         }
 //TEST.java
         package INTERFACE;
 
         public class TEST {
-            public static void main (String[] args){
+            public static void main(String[] args) {
                 ANIMAL animal = new ANIMAL(1);
                 PERSON person = new PERSON("BOB");
                 animal.sleep();
@@ -590,12 +640,13 @@ package INTERFACE;
                 outputInfo(animal1);
                 outputInfo(person1);
             }
-            public static void outputInfo (INFO info){
+
+            public static void outputInfo(INFO info) {
                 info.showInfo();
             }
         }
 
-        //Пакеты - позволяют организовать классы логически в наборы
+        //Пакеты - позволяют организовать классы логически в наборы !
         "C:\Users\User\Pictures\Screenshots\Снимок экрана (2).png"
         //Main.java
         import FOREST.SQUIRELL;
@@ -624,22 +675,97 @@ import java.util.Scanner;
         public class SQUIRELL {
         }
 
-        //Модификаторы доступа public, private, protected и default.
+        /*Модификаторы доступа public, private, protected и default.
+        https://programmera.ru/wp-content/uploads/2018/06/access-modifier1.png
+        */
 
+        //Полиморфизм - способность метода обравбатывать данные разных типов !
+//Main.java
+        public class Main {
+            public static void main(String[] args) {
+                ANIMAL animal = new DOG(); // UPCASTING - восходящее преобразование
+                animal.eat();
+                System.out.println();
+                DOG dog = new DOG();
+                dog.eat();
+                dog.bark();
+                DOG dog1 = (DOG) animal; //DOWNCASTING -нисходящее преобразование
+                DOG dog = (DOG) animal;
+                System.out.println();
+                CAT cat = new CAT();
+                cat.eat();
+                cat.cry();
+                System.out.println();
+                test(animal);
+                test(dog);
+                test(cat);
+            }
 
-        //Полиморфизм
+            public static void test(ANIMAL animal) {
+                animal.eat();
+            }
+        }
+        //ANIMAL.java
+        public class ANIMAL {
+            public void eat() {
+                System.out.println("ANIMAL IS EATING !");
+            }
+        }
+        //DOG.java
+        public class DOG extends ANIMAL {
+            public void eat() {
+                System.out.println("DOG IS EATING !");
+            }
 
+            public void bark() {
+                System.out.println("DOG IS BARKING !");
+            }
+        }
 
-        //Приведение примитивных типов данных.
+        //CAT.java
+        public class CAT extends ANIMAL {
+            public void cry() {
+                System.out.println("DON'T CRY !");
+            }
 
+            public void eat() {
+                System.out.println("CAT IS EATING !");
+            }
+        }
 
-        //Классы-обертки примитивных типов данных.
+        //Приведение примитивных типов данных !
+        public class Main {
+            public static void main(String[] args) {
+                float f = (float) 123.4;// можно только числа из типа double
+                int a = 123;
 
+                double w = a;
+                int y = (int) w;
 
-        //Восходящее и нисходящее преобразование.
+                y = Math.round(a);
 
+                long l = a;//неявное
+                int x = (int) l;//явное
 
-        //Введение в параметризацию. (Generics)
+                byte e = (byte) 128;
+                System.out.println(x);
+                System.out.println(f);
+                System.out.println(w);
+                System.out.println(e);
+            }
+        }
+
+        //Классы-обертки примитивных типов данных !
+        public class Main {
+            public static void main(String[] args) {
+                int x = 1;
+                Integer x2 = Integer.valueOf(25);
+                Integer.parseInt("123");
+                System.out.println(x);
+            }
+        }
+        
+        //Введение в параметризацию. (Generics) !
 
 
         //Wildcards (Generics)
